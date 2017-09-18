@@ -1,0 +1,50 @@
+// --------------------------------------------------
+// Base: Typography
+// --------------------------------------------------
+
+p {
+  @include breakpoint(xlarge) {
+    max-width: 45em;
+
+    .site-footer & {
+      max-width: none;
+    }
+  }
+}
+
+.section-header-description {
+  font-size: rem-calc(12);
+  margin-top: -2rem;
+  padding-bottom: 1rem;
+
+  @include breakpoint(xlarge) {
+    max-width: 65em;
+  }
+}
+
+.section-header-call-to-action {
+  margin-top: -1rem;
+
+  @include breakpoint(xlarge) {
+    margin-top: -2rem;
+    padding-bottom: 1rem;
+    max-width: 65em;
+  }
+}
+
+//
+// Headings
+// --------------------------------------------------
+.header-xxlarge { @extend h1; }
+.header-xlarge {  @extend h2; }
+.header-large {   @extend h3; }
+.header-medium {  @extend h4; }
+.header-small {   @extend h5; }
+.header-tiny {    @extend h6; }
+
+h6,
+.header-tiny {
+  text-transform: uppercase;
+  font-weight: $global-weight-normal;
+  margin-bottom: 0.5em;
+}
