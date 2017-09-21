@@ -18,6 +18,11 @@ You will need the following things properly installed on your computer.
 * `cd cp-platform-ember`
 * `npm install`
 
+### Configure
+
+* `cp .env.sample .env`
+Replace the sample values in the `.env` file with actual values.
+
 ## Running / Development
 
 * `ember serve`

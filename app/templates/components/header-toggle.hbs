@@ -3,7 +3,7 @@
   <div class="grid-x grid-padding-x">
     <div class="branding cell shrink large-auto">
       <a class="dcp-link" href="http://www1.nyc.gov/site/planning/index.page"><img class="dcp-logo" src="https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png" alt="NYC Planning"></a>
-      {{link-to 'Capital Planning Explorer' 'index' classNames='site-name'}}
+      {{link-to 'Capital Planning Platform' 'index' classNames='site-name'}}
     </div>
     <div class="cell auto hide-for-large text-right">
       <!-- <button {{action (mut closed) (not closed)}} class="responsive-nav-toggler hide-for-print" data-toggle="responsive-menu">Menu</button> -->
@@ -12,6 +12,12 @@
       <nav role="navigation">
         <ul class="vertical large-horizontal menu">
           <li>{{#link-to 'about'}}About{{/link-to}}</li>
+
+          {{#if isAuthenticated}}
+            <li><a {{ action "logout" }}>Logout ({{ profile.email }})</a></li>
+          {{else}}
+            <li><a {{ action "login" }}>Login</a></li>
+          {{/if}}
         </ul>
       </nav>
     </div>

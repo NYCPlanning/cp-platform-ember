@@ -1,2 +1,8 @@
 <a class="show-on-focus" href="#main">Skip to main content</a>
-{{header-toggle}}
+
+{{header-toggle
+  onLogin=(action "login")
+  onLogout=(action "logout")
+  isAuthenticated=session.isAuthenticated
+  profile=session.data.authenticated.profile
+}}
